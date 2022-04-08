@@ -15,6 +15,6 @@ pipelines:
             script:
               - REPORTS_PATH=./test-reports/build_${BITBUCKET_BUILD_NUMBER}
               - dotnet restore
-              - dotnet publish --self-contained true --no-restore --configuration Release --runtime "net6.0" --output "${REPORTS_PATH}"
+              - dotnet publish --self-contained true --no-restore --configuration Release --runtime "win7-x64" --output "${REPORTS_PATH}"
             artifacts:
               - ${REPORTS_PATH}
